@@ -1,3 +1,4 @@
+PUNTO 1
 #include <stdio.h>
 
 int main() {
@@ -20,6 +21,42 @@ int main() {
             break;
         } else {
             printf("Numero ingresado no valido, intente de nuevo\n");
+        }
+    }
+
+    return 0;
+}
+
+
+
+PUNTO 3
+#include <stdio.h>
+
+int main() {
+    int V;
+
+    printf("Por favor, ingresa un numero entero positivo: ");
+    scanf("%d", &V);
+
+    if (V <= 1) {
+        printf("Numero no valido\n");
+        return 0;
+    }
+
+    printf("Numeros primos hasta %d:\n", V);
+
+    for (int D = 2; D <= V; D++) {
+        int divisor = 1;
+
+        for (int j = 2; j < D; j++) {
+            if (D % j == 0) {
+                divisor = 0;
+                break;
+            }
+        }
+
+        if (divisor) {
+            printf("%d ", D);
         }
     }
 
