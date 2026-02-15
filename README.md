@@ -1,4 +1,4 @@
-PUNTO 1
+//PUNTO 1
 #include <stdio.h>
 
 int main() {
@@ -29,18 +29,20 @@ int main() {
 
 
 
-PUNTO 3
+ //PUNTO 3
 #include <stdio.h>
 
 int main() {
     int V;
-
+// V es el numero que ingresa el usuario 
+// D numero que se compara con V, para determinar si sigue aumentando o no el numero 
+// J numero que comprueba si es un numero primo o no
     printf("Por favor, ingresa un numero entero positivo: ");
     scanf("%d", &V);
 
-    if (V <= 1) {
-        printf("Numero no valido\n");
-        return 0;
+     while (V <= 1) {
+        printf("Numero no valido. Intenta de nuevo: ");
+        scanf("%d", &V);
     }
 
     printf("Numeros primos hasta %d:\n", V);
