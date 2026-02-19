@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+
+int main() {
+    int LECTURAS_ADC[10] = {100, 105, 98, 110, 115, 120, 125, 130, 128, 135};
+    float filtro[10] = {0};  
+    
+    for(int P = 2; P <= 8; P++) {
+        filtro[P] = (LECTURAS_ADC[P] +
+                     LECTURAS_ADC[P - 1] +
+                     LECTURAS_ADC[P - 2]) / 3.0;
+    }
+
+    // Mostrar resultados
+    printf("Lecturas originales:\n");
+    for(int P = 0; P < 10; P++) {
+        printf("%d ", LECTURAS_ADC[P]);
+    }
+
+    printf("\n\nLecturas filtradas:\n");
+    for(int P = 0; P < 10; P++) {
+        printf("%.2f ", filtro[P]);
+    }
+
+    return 0;
+}
