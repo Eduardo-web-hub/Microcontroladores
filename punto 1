@@ -1,13 +1,7 @@
 //PUNTO 1
 #include <stdio.h>
-
 int main() {
-    int V;
-
-    while (1) {
-        printf("Por favor, ingresa un numero entre 1000 y 9999: ");
-        scanf("%d", &V);
-        if (V >= 1000 && V <= 9999) {
+int V= 1590;
             
             int miles = (V / 1000);
             int centenas = (V / 100) % 10;
@@ -18,49 +12,9 @@ int main() {
             printf("Centenas: %d\n", centenas);
             printf("Decenas: %d\n", decenas);
             printf("Unidades: %d\n", unidades);
-            break;
-        } else {
-            printf("Numero ingresado no valido, intente de nuevo\n");
-        }
-    }
-
-    return 0;
-}
-
-
-
- //PUNTO 3
-#include <stdio.h>
-
-int main() {
-    int V;
-// V es el numero que ingresa el usuario 
-// D numero que se compara con V, para determinar si sigue aumentando o no el numero 
-// J numero que comprueba si es un numero primo o no
-    printf("Por favor, ingresa un numero entero positivo: ");
-    scanf("%d", &V);
-
-     while (V <= 1) {
-        printf("Numero no valido. Intenta de nuevo: ");
-        scanf("%d", &V);
-    }
-
-    printf("Numeros primos hasta %d:\n", V);
-
-    for (int D = 2; D <= V; D++) {
-        int divisor = 1;
-
-        for (int j = 2; j < D; j++) {
-            if (D % j == 0) {
-                divisor = 0;
-                break;
-            }
-        }
-
-        if (divisor) {
-            printf("%d ", D);
-        }
-    }
+            
+        
+    
 
     return 0;
 }
